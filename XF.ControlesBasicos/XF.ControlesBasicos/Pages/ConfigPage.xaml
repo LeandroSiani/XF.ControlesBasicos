@@ -8,8 +8,8 @@
             <TableView>
                 <TableView.Root>
                     <TableSection Title="Privacidade">
-                        <SwitchCell x:Name="swt_showInput" Text="Aceita receber e-mail?" On="{Binding ShowInput}" OnChanged="SwitchCell_OnChanged" />
-                        <EntryCell x:Name="input_email" Text="{Binding Email}" IsEnabled="False" />
+                        <SwitchCell x:Name="SwtAceita" Text="Aceita receber e-mail?" On="{Binding ShowInput}" OnChanged="SwitchCell_OnChanged" />
+                        <EntryCell x:Name="EntEmail" Text="{Binding Email}" IsEnabled="False" />
                     </TableSection>
                 </TableView.Root>
             </TableView>

@@ -15,20 +15,20 @@ namespace XF.ControlesBasicos
         public MainPage()
         {
             InitializeComponent();
+            if (_configuracao == null)
+                _configuracao = new Configuracao();
         }
 
         private void BtnEnviar_Clicked(object sender, EventArgs e)
         {
-            if (_configuracao != null && _configuracao.ShowInput && !string.IsNullOrEmpty(_configuracao.Email))
+            if (_configuracao.ShowInput && !string.IsNullOrEmpty(_configuracao.Email))
                 DisplayAlert("E-mail Enviado", $"Um e-mail foi enviado para {_configuracao.Email}", "OK");
             else
-                DisplayAlert("Atenção", "Nenhum e-mail informado. Acesse o menu Configuração e digite seu e-mail.", "OK");
+                DisplayAlert("Atenção", "Nenhum e-mail informado. ", "OK");
         }
 
         private void BtnConfiguracao_Clicked(object sender, EventArgs e)
-        {
-            if (_configuracao == null)
-                _configuracao = new Configuracao();
+        {           
 
             Navigation.PushAsync(new ConfigPage() { BindingContext = _configuracao });
         }

@@ -15,14 +15,12 @@ namespace XF.ControlesBasicos.Pages
         public ConfigPage()
         {
             InitializeComponent();
-
-
         }
 
         private void SwitchCell_OnChanged(object sender, ToggledEventArgs e)
         {
-            input_email.Text = "";
-            input_email.IsEnabled = e.Value;
+            EntEmail.Text = "";
+            EntEmail.IsEnabled = e.Value;
         }
     }
 }
